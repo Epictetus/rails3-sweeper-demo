@@ -17,7 +17,7 @@ class UserSweeper < ActionController::Caching::Sweeper
   private
 
   def get_id(resource)
-    resource.class.name == 'User' ? resource.id : resource.user_id
+    resource.is_a?(User) ? resource.id : resource.user_id
   end
 end
 
