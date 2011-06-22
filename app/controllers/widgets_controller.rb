@@ -1,5 +1,7 @@
 class WidgetsController < ApplicationController
+
   before_filter :grab_user_from_user_id
+  cache_sweeper :user_sweeper, :only => [ :create, :update, :delete ]
 
   # GET /widgets
   # GET /widgets.xml

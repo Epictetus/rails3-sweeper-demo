@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+
+  caches_action :show, :layout => false
+  cache_sweeper :user_sweeper, :only => [ :create, :update, :delete ]
+
   # GET /users
   # GET /users.xml
   def index
@@ -81,3 +85,4 @@ class UsersController < ApplicationController
     end
   end
 end
+
