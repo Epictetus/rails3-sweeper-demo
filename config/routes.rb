@@ -1,7 +1,10 @@
 SweeperTest::Application.routes.draw do
-  resources :widgets
 
-  resources :users
+  resources :users do
+    resources :widgets
+  end
+
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
