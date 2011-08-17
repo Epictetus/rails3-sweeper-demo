@@ -1,10 +1,10 @@
-<%= form_for([@user, @widget]) do |f| %>
-  <% if @widget.errors.any? %>
+<%= form_for([user, widget]) do |f| %>
+  <% if widget.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@widget.errors.count, "error") %> prohibited this widget from being saved:</h2>
 
       <ul>
-      <% @widget.errors.full_messages.each do |msg| %>
+      <% widget.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

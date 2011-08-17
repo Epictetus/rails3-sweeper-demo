@@ -2,15 +2,15 @@
 
 <p>
   <b>Title:</b>
-  <%= @widget.title %>
+  <%= widget.title %>
 </p>
 
 <p>
   <b>Description:</b>
-  <%= @widget.description %>
+  <%= widget.description %>
 </p>
 
 
-<%= link_to 'Edit', edit_user_widget_path(@widget) %> |
-<%= link_to 'Back', user_widgets_path(@user) %>
+<%= link_to 'Edit', edit_user_widget_path(user,widget) %> |
+<%= link_to 'Back', user_widgets_path(user) %>
 

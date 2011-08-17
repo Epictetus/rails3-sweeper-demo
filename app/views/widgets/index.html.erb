@@ -1,4 +1,4 @@
-<h1>Listing <%= @user.name %> widgets</h1>
+<h1>Listing <%= user.name %> widgets</h1>
 
 <table>
   <tr>
@@ -9,19 +9,19 @@
     <th></th>
   </tr>
 
-<% @widgets.each do |widget| %>
+<% widgets.each do |w| %>
   <tr>
-    <td><%= widget.title %></td>
-    <td><%= widget.description %></td>
-    <td><%= link_to 'Show', user_widget_path(@user,widget) %></td>
-    <td><%= link_to 'Edit', edit_user_widget_path(@user, widget) %></td>
-    <td><%= link_to 'Destroy', user_widget_path(@user, widget), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= w.title %></td>
+    <td><%= w.description %></td>
+    <td><%= link_to 'Show', user_widget_path(user,w) %></td>
+    <td><%= link_to 'Edit', edit_user_widget_path(user, w) %></td>
+    <td><%= link_to 'Destroy', user_widget_path(user, w), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Widget', new_user_widget_path(@user) %>
+<%= link_to 'New Widget', new_user_widget_path(user) %>
 <%= link_to 'Back', users_path %>
 
